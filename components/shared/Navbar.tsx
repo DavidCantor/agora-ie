@@ -12,7 +12,7 @@ function Navbar() {
           {/* Logo y Nombre - Agrandados */}
           <div className="flex items-center shrink-0">
             <Link href="/" className="flex items-center gap-4 group transition-all">
-              <div className="relative w-16 h-16 flex items-center justify-center transition-transform group-hover:scale-105">
+              <div className="relative w-16 h-16 flex items-center justify-center">
                 <Image
                   src="/agora_logo.webp"
                   alt="Logo Colegio Agora IE"
@@ -36,8 +36,8 @@ function Navbar() {
           <div className="hidden md:flex items-center gap-2">
             {[
               { name: 'Inicio', href: '/' },
-              { name: 'Sobre Nosotros', href: '/sobre-nosotros' },
               { name: 'Programas', href: '/programas' },
+              { name: 'Sobre Nosotros', href: '/sobre-nosotros' },
             ].map((item) => (
               <Link
                 key={item.name}

@@ -1,73 +1,86 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star } from "lucide-react";
+import { MoveRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-background">
-      {/* Decoración de fondo */}
-      <div className="absolute top-0 right-0 -z-10 h-full w-1/2 bg-linear-to-l from-primary/5 to-transparent" />
-      <div className="absolute -top-24 -left-24 size-96 rounded-full bg-destructive/5 blur-3xl" />
+    <section className="relative min-h-[90vh] w-full flex items-center bg-[#F2F2F2] dark:bg-[#0D0D0D] overflow-hidden">
+      {/* ELEMENTOS GEOMÉTRICOS: Orden y Razón */}
+      {/* Un pilar vertical sólido en el color dorado de la paleta */}
+      <div className="absolute right-0 top-0 h-full w-1/3 bg-[#D99D55]/5 hidden lg:block border-l border-[#D99D55]/20" />
+      
+      {/* Detalle decorativo: Una línea roja que representa el "Recto Camino" */}
+      <div className="absolute left-10 top-0 h-full w-px bg-[#D93644]/20 hidden md:block" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
-              <Star className="size-3 fill-current" />
-              Inscripciones Abiertas 2026
+      <div className="mx-auto max-w-7xl px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 z-10">
+        
+        {/* BLOQUE DE CONTENIDO */}
+        <div className="lg:col-span-8 space-y-12">
+          
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="h-px w-12 bg-[#D93644]" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-[#262626] dark:text-[#F2F2F2]/60">
+                Virtud • Razón • Disciplina
+              </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight text-foreground">
-              Formando <span className="text-primary">Líderes</span> para el Mañana
+            <h1 className="text-6xl md:text-8xl font-serif font-black tracking-tighter text-[#0D0D0D] dark:text-[#F2F2F2] leading-[0.85]">
+              DOMINA TU <br />
+              <span className="text-[#D93644]">CARÁCTER</span>, <br />
+              FORJA TU DESTINO.
             </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
-              En el **Colegio Agora IE**, potenciamos el talento humano a través de una educación integral, ética y de vanguardia.
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="h-14 rounded-full px-10 text-lg font-bold shadow-lg shadow-primary/20 bg-primary hover:bg-primary/90">
-                Ver Programas
-                <ArrowRight className="ml-2 size-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="h-14 rounded-full px-10 text-lg font-bold border-2 transition-all hover:bg-accent">
-                Sobre Nosotros
-              </Button>
-            </div>
-
-            {/* Mini Stats */}
-            <div className="flex gap-8 pt-4 border-t border-border">
-              {[
-                { label: "Años de Exp.", value: "15+" },
-                { label: "Graduados", value: "500+" },
-                { label: "Nivel ICFES", value: "A+" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-2xl font-bold text-foreground">{stat.value}</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-tighter">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Imagen Hero */}
-          <div className="relative aspect-square lg:aspect-auto lg:h-150 w-full rounded-2xl overflow-hidden shadow-2xl border border-border">
-            <div className="absolute inset-0 bg-muted flex items-center justify-center text-muted-foreground">
-               <span className="text-sm italic">Cargando Imagen Institucional...</span>
-            </div>
-            <Image 
-              src="/hero-students.jpg" 
-              alt="Estudiantes Colegio Agora"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute bottom-6 left-6 right-6 p-6 bg-background/80 backdrop-blur-md rounded-xl border border-border hidden md:block">
-              <p className="text-sm font-medium text-foreground italic">
-                &ldquo;La educación es el arma más poderosa para cambiar el mundo.&rdquo;
-              </p>
-            </div>
+          <p className="max-w-xl text-xl font-serif italic leading-relaxed text-[#262626]/80 dark:text-[#F2F2F2]/70 border-l-4 border-[#D99D55] pl-8">
+            &ldquo;La felicidad de tu vida depende de la calidad de tus pensamientos.&rdquo;
+            <span className="not-italic text-sm mt-4 block font-sans font-bold uppercase tracking-widest text-[#D99D55]">
+              — Marco Aurelio
+            </span>
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-0">
+            {/* Botones con bordes rectos y colores de tu paleta */}
+            <Button 
+              className="h-16 rounded-none px-12 bg-[#0D0D0D] dark:bg-[#F2F2F2] text-[#F2F2F2] dark:text-[#0D0D0D] hover:bg-[#D93644] dark:hover:bg-[#D93644] hover:text-white transition-all duration-300 font-bold uppercase tracking-widest text-xs"
+            >
+              Iniciar Proceso
+            </Button>
+            <Button 
+              variant="outline"
+              className="h-16 rounded-none px-10 border-[#0D0D0D] dark:border-[#F2F2F2] text-[#0D0D0D] dark:text-[#F2F2F2] hover:bg-[#D99D55] hover:border-[#D99D55] hover:text-white transition-all duration-300 font-bold uppercase tracking-widest text-xs"
+            >
+              Filosofía Ágora
+              <MoveRight className="ml-2 size-4" />
+            </Button>
           </div>
+        </div>
+
+        {/* ELEMENTO SIMBÓLICO: Un bloque sólido de color */}
+        <div className="lg:col-span-4 flex items-center justify-center">
+          <div className="relative w-full aspect-square border-[12px] border-[#D99D55] flex items-center justify-center p-8 bg-white dark:bg-[#262626] shadow-2xl">
+             <div className="text-center space-y-4">
+                <p className="text-6xl font-serif font-black text-[#0D0D0D] dark:text-[#F2F2F2]">IE</p>
+                <div className="h-2 w-12 bg-[#D93644] mx-auto" />
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#D99D55]">Agora</p>
+             </div>
+             {/* Coordenadas o texto pequeño en las esquinas del cuadro */}
+             <span className="absolute top-2 left-2 text-[8px] font-mono opacity-40">MOSQUERA • COL</span>
+             <span className="absolute bottom-2 right-2 text-[8px] font-mono opacity-40">EST. 2026</span>
+          </div>
+        </div>
+
+      </div>
+
+      {/* FOOTER DEL HERO: Los 4 pilares estoicos */}
+      <div className="absolute bottom-0 left-0 w-full bg-[#0D0D0D] py-6 px-12 hidden md:block">
+        <div className="mx-auto max-w-7xl flex justify-between items-center text-[#F2F2F2]/40 text-[9px] font-bold uppercase tracking-[0.6em]">
+          <span>Sabiduría</span>
+          <div className="size-1 bg-[#D93644] rounded-full" />
+          <span>Justicia</span>
+          <div className="size-1 bg-[#D99D55] rounded-full" />
+          <span>Coraje</span>
+          <div className="size-1 bg-[#D93644] rounded-full" />
+          <span>Templanza</span>
         </div>
       </div>
     </section>
