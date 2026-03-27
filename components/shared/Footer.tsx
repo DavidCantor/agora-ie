@@ -22,8 +22,8 @@ function Footer() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-black tracking-tight text-primary uppercase leading-none">
-                  Agora IE
+                <span className="text-4xl font-black tracking-tight text-primary uppercase leading-none">
+                  Ágora 
                 </span>
                 <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-[0.2em] mt-1">
                   Excelencia Educativa
@@ -68,10 +68,10 @@ function Footer() {
             <ul className="grid gap-3 text-sm">
               {[
                 { name: 'Inicio', href: '/' },
-                { name: 'Sobre Nosotros', href: '/sobre-nosotros' },
-                { name: 'Programas', href: '/programas' },
-                { name: 'Estudiantes', href: '/estudiantes' },
-                { name: 'Contacto', href: '/contacto' },
+                { name: 'Institución', href: '/institucion' },
+                { name: 'Oferta Académica', href: '/oferta' },
+                { name: 'Comunidad', href: '/comunidad' },
+                { name: 'Admisiones', href: '/admisiones' },
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
@@ -114,7 +114,7 @@ function Footer() {
         {/* Barra inferior */}
         <div className="mt-16 border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            © 2026 <span className="font-semibold text-foreground">Colegio Agora IE</span>. Todos los derechos reservados.
+            © 2026 <span className="font-semibold text-foreground">Institución Educativa Ágora</span>. Todos los derechos reservados.
           </p>
           <div className="flex gap-6 text-xs text-muted-foreground">
             <Link href="/privacidad" className="hover:text-primary transition-colors">Política de Privacidad</Link>

@@ -1,7 +1,7 @@
 import { Hero } from "@/components/sections/inicio/Hero";
 import { Features } from "@/components/sections/inicio/Features";
 
-export default function Home() {
+export default function Inicio() {
   return (
     <main className="flex flex-col w-full">
       <Hero />

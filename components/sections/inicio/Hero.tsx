@@ -57,7 +57,7 @@ export function Hero() {
 
         {/* ELEMENTO SIMBÓLICO: Un bloque sólido de color */}
         <div className="lg:col-span-4 flex items-center justify-center">
-          <div className="relative w-full aspect-square border-[12px] border-[#D99D55] flex items-center justify-center p-8 bg-white dark:bg-[#262626] shadow-2xl">
+          <div className="relative w-full aspect-square border-12 border-[#D99D55] flex items-center justify-center p-8 bg-white dark:bg-[#262626] shadow-2xl">
              <div className="text-center space-y-4">
                 <p className="text-6xl font-serif font-black text-[#0D0D0D] dark:text-[#F2F2F2]">IE</p>
                 <div className="h-2 w-12 bg-[#D93644] mx-auto" />

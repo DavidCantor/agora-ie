@@ -2,10 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+
 function Navbar() {
   return (
     // "inline-size" asegura que el layout sea estable
-    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           
@@ -22,8 +23,8 @@ function Navbar() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-black tracking-tighter text-primary leading-none uppercase">
-                  Colegio Agora
+                <span className="text-3xl font-black tracking-tighter text-primary leading-none uppercase">
+                  Ágora
                 </span>
                 <span className="text-[10px] font-medium text-muted-foreground tracking-[0.2em] uppercase">
                   Institución Educativa
@@ -36,8 +37,9 @@ function Navbar() {
           <div className="hidden md:flex items-center gap-2">
             {[
               { name: 'Inicio', href: '/' },
-              { name: 'Programas', href: '/programas' },
-              { name: 'Sobre Nosotros', href: '/sobre-nosotros' },
+              { name: 'Institución', href: '/institucion' },
+              { name: 'Comunidad', href: '/comunidad' },
+              { name: 'Oferta Académica', href: '/oferta' },
             ].map((item) => (
               <Link
                 key={item.name}
@@ -49,10 +51,10 @@ function Navbar() {
             ))}
             
             <Link 
-              href="/contacto" 
+              href="/admisiones" 
               className="ml-4 inline-flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:opacity-90 active:scale-95"
             >
-              Contacto
+              Admisiones
             </Link>
           </div>
 
