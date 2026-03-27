@@ -1,11 +1,12 @@
-import Image from "next/image";
-// --preset b4gy4735u
+import { Hero } from "@/components/sections/inicio/Hero";
+import { Features } from "@/components/sections/inicio/Features";
+
 export default function Home() {
   return (
-    <div>
-      <main>
-        <h1>Index</h1>
-      </main>
-    </div>
+    <main className="flex flex-col w-full">
+      <Hero />
+      <Features />
+      {/* Aquí podrás añadir más secciones como <Events /> o <Testimonials /> */}
+    </main>
   );
 }
