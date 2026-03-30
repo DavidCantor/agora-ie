@@ -5,14 +5,13 @@ import Image from 'next/image'
 
 function Navbar() {
   return (
-    // "inline-size" asegura que el layout sea estable
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           
           {/* Logo y Nombre - Agrandados */}
           <div className="flex items-center shrink-0">
-            <Link href="/" className="flex items-center gap-4 group transition-all">
+            <Link href="/" scroll={false} className="flex items-center gap-4 group transition-all">
               <div className="relative w-16 h-16 flex items-center justify-center">
                 <Image
                   src="/agora_logo.webp"
@@ -44,6 +43,7 @@ function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
+                scroll={false}
                 className="px-4 py-2 text-sm font-semibold text-foreground/70 transition-all hover:text-primary hover:bg-primary/5 rounded-md"
               >
                 {item.name}
@@ -51,7 +51,8 @@ function Navbar() {
             ))}
             
             <Link 
-              href="/admisiones" 
+              href="/admisiones"
+              scroll={false}
               className="ml-4 inline-flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:opacity-90 active:scale-95"
             >
               Admisiones

@@ -1,6 +1,6 @@
 export default function Comunidad() {
   return (
-    <main className="flex-1">
+    <main>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl font-bold text-center text-destructive mb-8">Comunidad</h1>
         <div className="prose prose-lg mx-auto">
